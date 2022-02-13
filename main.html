@@ -14,21 +14,26 @@
 <body>
 <div id="app"  >
     <div id="addNotesForm" >
-        <form class="add-note">
-            <textarea></textarea>
+        <form class=" add-note" >
+            <textarea id="note"></textarea>
             <div>
-                <button class="btn" type="submit" >إضافة الملاحظة</button>
+                <button class="btn " type="submit" >إضافة الملاحظة</button>
             </div>
         </form>
 
         <div class="action-buttons">
-            <button class="btn btn-danger" id="reverseBtn">عكس الترتيب</button>
+            <button class="btn btn-primary text-black" id="reverseBtn">عكس الترتيب</button>
             <button class="btn" id="clearAllBtn">حذف الكل</button>
         </div>
     </div>
-    <div id="notes"></div>
+    <div id="notes_space"></div>
 </div>
 <script src="Notes.js"></script>
 <script src="app.js"></script>
+<script >
+    addNotesForm.onsubmit=()=>{
+
+    }
+</script>
 </body>
 </html>

@@ -26,16 +26,21 @@ class Notes{
         let obNote= await this.accessStore("readwrite");
         return obNote.add(note)
     }
-    delete(noteId){
-
+    async delete(noteId){
+         let obNote= await this.accessStore("readwrite");
+         return  obNote.delete(noteId)
     }
-    clear(){
-
+   async clear(){
+       let obNote= await this.accessStore("readwrite");
+       return  obNote.clear()
     }
-    all(){
-
+   async all(){
+         let obNote=await  this.accessStore("readonly");
+         return obNote.openCursor(null,this.reverseOrder ? "prev": "next")
     }
-    update(note){
+    async update(note){
     //put
+        let obNote= await this.accessStore("readwrite");
+        return  obNote.put(note)
     }
 }
