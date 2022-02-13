@@ -30,7 +30,7 @@ class Notes{
          let obNote= await this.accessStore("readwrite");
          return  obNote.delete(noteId)
     }
-   async clear(){
+   async clearAllNote(){
        let obNote= await this.accessStore("readwrite");
        return  obNote.clear()
     }
@@ -43,4 +43,5 @@ class Notes{
         let obNote= await this.accessStore("readwrite");
         return  obNote.put(note)
     }
+
 }
